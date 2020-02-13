@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Product} from './data/product';
 import {ShippingCost} from './data/shippingCost';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +26,7 @@ export class CartService {
     return this.items;
   }
 
-  getShippingPrices() {
-    return this.httpClient.get('/partyLions/assets/data/shipping.json');
+  getShippingPrices(): Observable<ShippingCost[]> {
+    return this.httpClient.get<ShippingCost[]>('/partyLions/assets/data/shipping.json');
   }
 }
