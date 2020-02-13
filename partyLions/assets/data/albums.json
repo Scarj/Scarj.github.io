@@ -1,0 +1,22 @@
+{
+  "Albums": [
+    {
+      "title": "Wild",
+      "type": "EP",
+      "date": "2014-12-11",
+      "cover": "wild.jpg"
+    },
+    {
+      "title": "Run",
+      "type": "Single",
+      "date": "2016-05-13",
+      "cover": "run.jpg"
+    },
+    {
+      "title": "This Fire",
+      "type": "Single",
+      "date": "2017-10-22",
+      "cover": "fire.jpg"
+    }
+  ]
+}
