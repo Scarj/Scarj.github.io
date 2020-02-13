@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {products} from '../products';
+import {Product} from '../data/product';
 
 @Component({
   selector: 'app-product-list',
@@ -8,7 +9,7 @@ import {products} from '../products';
   encapsulation: ViewEncapsulation.None
 })
 export class ProductListComponent implements OnInit {
-  products = products;
+  products: Product[] = products;
 
   constructor() {
 
