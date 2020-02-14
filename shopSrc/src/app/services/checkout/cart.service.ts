@@ -27,6 +27,6 @@ export class CartService {
   }
 
   getShippingPrices(): Observable<ShippingCost[]> {
-    return this.httpClient.get<ShippingCost[]>('/partyLions/assets/data/shipping.json');
+    return this.httpClient.get<ShippingCost[]>('/shop/assets/data/shipping.json');
   }
 }

@@ -37,7 +37,7 @@ import {ShippingComponent} from './components/checkout/shipping/shipping.compone
     ])
   ],
   providers: [{
-    provide: APP_BASE_HREF, useValue: '/partyLions'
+    provide: APP_BASE_HREF, useValue: '/shop'
   }],
   bootstrap: [AppComponent]
 })
