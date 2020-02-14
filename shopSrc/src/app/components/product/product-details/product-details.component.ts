@@ -8,7 +8,7 @@ import {ProductService} from "../../../services/product/product.service";
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.less'],
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.None
 })
 export class ProductDetailsComponent implements OnInit {
   product: Product;

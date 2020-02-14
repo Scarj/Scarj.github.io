@@ -6,7 +6,7 @@ import {ProductService} from "../../../services/product/product.service";
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.less'],
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.None
 })
 export class ProductListComponent implements OnInit {
   products: Product[] = [];

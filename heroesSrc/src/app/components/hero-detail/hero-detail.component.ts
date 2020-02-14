@@ -9,7 +9,7 @@ import {HeroService} from "../../services/hero.service";
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.less'],
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.None
 })
 export class HeroDetailComponent implements OnInit {
   hero: Hero;
