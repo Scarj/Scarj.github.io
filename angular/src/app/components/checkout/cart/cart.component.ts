@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {CartService} from '../cart.service';
-import {Product} from '../data/product';
+import {CartService} from '../../../services/checkout/cart.service';
+import {Product} from '../../../data/product';
 import {FormBuilder} from '@angular/forms';
 
 @Component({

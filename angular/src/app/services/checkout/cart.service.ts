@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Product} from './data/product';
-import {ShippingCost} from './data/shippingCost';
+import {Product} from '../../data/product';
+import {ShippingCost} from '../../data/shippingCost';
 import {Observable} from 'rxjs';
 
 @Injectable({
