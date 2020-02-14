@@ -1,9 +1,8 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-
-import {products} from '../products';
-import {CartService} from '../cart.service';
-import {Product} from '../data/product';
+import {CartService} from '../../../services/checkout/cart.service';
+import {Product} from '../../../data/product';
+import {ProductService} from "../../../services/product/product.service";
 
 @Component({
   selector: 'app-product-details',
@@ -14,13 +13,17 @@ import {Product} from '../data/product';
 export class ProductDetailsComponent implements OnInit {
   product: Product;
 
-  constructor(private route: ActivatedRoute, private cartService: CartService) {
+  constructor(private route: ActivatedRoute, private cartService: CartService, private productService: ProductService) {
   }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       let productId = +params.get('productId');
-      this.product = products[productId];
+      this.productService.getProducts().toPromise().then(
+        products => {
+          this.product = products[productId];
+        }
+      );
     });
   }
 
