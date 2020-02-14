@@ -16,6 +16,11 @@ describe('ProductAlertsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ProductAlertsComponent);
     component = fixture.componentInstance;
+    component.product = {
+      "name": "Phone XL",
+      "price": 799,
+      "description": "A large phone with one of the best screens"
+    };
     fixture.detectChanges();
   });
 

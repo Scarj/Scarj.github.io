@@ -8,7 +8,7 @@ import {ProductService} from "../../../services/product/product.service";
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.less'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class ProductDetailsComponent implements OnInit {
   product: Product;
@@ -19,9 +19,11 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       let productId = +params.get('productId');
-      this.productService.getProducts().toPromise().then(
+      this.productService.getProducts().subscribe(
         products => {
           this.product = products[productId];
+        }, error => {
+          console.log(error);
         }
       );
     });

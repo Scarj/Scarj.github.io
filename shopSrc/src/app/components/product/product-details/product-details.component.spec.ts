@@ -1,6 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ProductDetailsComponent } from './product-details.component';
+import {ProductDetailsComponent} from './product-details.component';
+import {AppRoutingModule} from 'src/app/app-routing.module';
+import {RouterTestingModule} from '@angular/router/testing';
+import {HttpClient, HttpHandler} from '@angular/common/http';
 
 describe('ProductDetailsComponent', () => {
   let component: ProductDetailsComponent;
@@ -8,7 +11,11 @@ describe('ProductDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductDetailsComponent ]
+      imports: [AppRoutingModule, RouterTestingModule.withRoutes([
+        {path: 'products/1', component: ProductDetailsComponent},
+      ])],
+      declarations: [ProductDetailsComponent],
+      providers: [HttpClient, HttpHandler]
     })
     .compileComponents();
   }));

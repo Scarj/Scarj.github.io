@@ -1,6 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CartComponent } from './cart.component';
+import {CartComponent} from './cart.component';
+import {HttpClient, HttpHandler} from '@angular/common/http';
+import {FormBuilder} from '@angular/forms';
 
 describe('CartComponent', () => {
   let component: CartComponent;
@@ -8,7 +10,8 @@ describe('CartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CartComponent ]
+      providers: [HttpClient, HttpHandler, FormBuilder],
+      declarations: [CartComponent]
     })
     .compileComponents();
   }));

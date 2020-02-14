@@ -7,7 +7,7 @@ import {FormBuilder} from '@angular/forms';
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.less'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class CartComponent implements OnInit {
   items: Product[];
