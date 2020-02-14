@@ -1,14 +1,16 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Hero} from "../../data/hero";
-import {HEROES} from "../../data/mock-heroes";
+import {HeroService} from "../../services/hero.service";
+import {MessageService} from "../../services/message.service";
 
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.less']
+  styleUrls: ['./heroes.component.less'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class HeroesComponent implements OnInit {
-  heroes = HEROES;
+  heroes: Hero[];
   selectedHero: Hero;
 
   hero: Hero = {
@@ -16,13 +18,21 @@ export class HeroesComponent implements OnInit {
     name: 'Windstorm'
   };
 
-  constructor() {
+  constructor(private heroService: HeroService, public messageService: MessageService) {
   }
 
   ngOnInit(): void {
+    this.getHeroes();
   }
 
   onSelect(hero: Hero) {
     this.selectedHero = hero;
+    this.messageService.add(`HeroService: Selected hero id=${hero.id}`);
+  }
+
+  getHeroes() {
+    this.heroService.getHeroes().subscribe(heroes => {
+      this.heroes = heroes;
+    });
   }
 }

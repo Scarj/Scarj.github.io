@@ -8,13 +8,13 @@ import {CartService} from "../../../services/checkout/cart.service";
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.less'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class ProductListComponent implements OnInit {
   products: Observable<Product[]>;
 
 
-  constructor(private productService: ProductService, private cartService: CartService) {
+  constructor(private productService: ProductService) {
 
   }
 
