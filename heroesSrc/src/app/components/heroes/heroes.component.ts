@@ -7,7 +7,7 @@ import {MessageService} from "../../services/message.service";
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.less'],
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.None
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];

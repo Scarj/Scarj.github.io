@@ -8,7 +8,7 @@ import {HeroService} from "../../services/hero.service";
   selector: 'app-hero-search',
   templateUrl: './hero-search.component.html',
   styleUrls: ['./hero-search.component.less'],
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.None
 })
 
 export class HeroSearchComponent implements OnInit {

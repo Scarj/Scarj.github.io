@@ -1,9 +1,10 @@
-import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-product-alerts',
   templateUrl: './product-alerts.component.html',
-  styleUrls: ['./product-alerts.component.less']
+  styleUrls: ['./product-alerts.component.less'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ProductAlertsComponent implements OnInit {
   @Input() product;

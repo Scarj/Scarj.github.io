@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
   selector: 'app-shipping',
   templateUrl: './shipping.component.html',
   styleUrls: ['./shipping.component.less'],
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.None
 })
 export class ShippingComponent implements OnInit {
   shippingCosts: Observable<ShippingCost[]>;
