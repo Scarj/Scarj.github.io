@@ -12,6 +12,6 @@ export class ProductService {
   }
 
   getProducts(): Observable<Product[]> {
-    return this.httpClient.get<Product[]>('/partyLions/assets/data/products.json');
+    return this.httpClient.get<Product[]>('/shop/assets/data/products.json');
   }
 }
