@@ -1,8 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Product} from '../../../data/product';
 import {ProductService} from "../../../services/product/product.service";
-import {Observable} from "rxjs";
-import {CartService} from "../../../services/checkout/cart.service";
 
 @Component({
   selector: 'app-product-list',
@@ -11,7 +9,7 @@ import {CartService} from "../../../services/checkout/cart.service";
   encapsulation: ViewEncapsulation.Emulated
 })
 export class ProductListComponent implements OnInit {
-  products: Observable<Product[]>;
+  products: Product[] = [];
 
 
   constructor(private productService: ProductService) {
@@ -19,7 +17,14 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
+    this.productService.getProducts().subscribe(
+      products => {
+        this.products = products;
+      },
+      error => {
+        console.log(error)
+      }
+    );
   }
 
   share() {
