@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import {APP_BASE_HREF} from "@angular/common";
 import { HeroesComponent } from './components/heroes/heroes.component';
 import {FormsModule} from "@angular/forms";
+import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
