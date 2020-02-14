@@ -28,13 +28,7 @@ import {ShippingComponent} from './components/checkout/shipping/shipping.compone
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      {path: '', component: ProductListComponent},
-      {path: 'products/:productId', component: ProductDetailsComponent},
-      {path: 'cart', component: CartComponent},
-      {path: 'shipping', component: ShippingComponent},
-    ])
+    ReactiveFormsModule
   ],
   providers: [{
     provide: APP_BASE_HREF, useValue: '/shop'
