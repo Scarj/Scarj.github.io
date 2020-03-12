@@ -6,7 +6,6 @@ import {HeroService} from "../../services/hero.service";
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.less'],
-  encapsulation: ViewEncapsulation.None
 })
 export class DashboardComponent implements OnInit {
   heroes: Hero[];

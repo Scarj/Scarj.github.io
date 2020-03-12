@@ -4,7 +4,6 @@ import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from 
   selector: 'app-product-alerts',
   templateUrl: './product-alerts.component.html',
   styleUrls: ['./product-alerts.component.less'],
-  encapsulation: ViewEncapsulation.None
 })
 export class ProductAlertsComponent implements OnInit {
   @Input() product;
